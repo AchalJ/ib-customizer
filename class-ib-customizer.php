@@ -477,7 +477,7 @@ class IBCustomizer {
 
             $section = array(
                 'title'    => $section_data['title'],
-                'priority' => $section_priority
+                'priority' => isset( $section_data['priority'] ) ? $section_data['priority'] : $section_priority
             );
 
             if ( !empty( $panel_key ) ) {
