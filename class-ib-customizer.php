@@ -582,7 +582,7 @@ class IBCustomizer {
 	}
 
 	/**
-	 * Sanitize callback for Customizer number settings.
+	 * Sanitize callback for Customizer number field.
 	 *
 	 * @since 1.0.0
 	 * @return int
@@ -591,6 +591,17 @@ class IBCustomizer {
 	{
 		return is_numeric( $val ) ? $val : 0;
 	}
+
+    /**
+	 * Sanitize callback for Customizer email field.
+	 *
+	 * @since 1.0.0
+	 * @return int
+	 */
+    static public function sanitize_email( $val )
+    {
+        return filter_var( $val, FILTER_VALIDATE_EMAIL );
+    }
 
 }
 IBCustomizer::init();
