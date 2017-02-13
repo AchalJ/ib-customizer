@@ -35,7 +35,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     	{
     		switch($this->type) {
 
-    			case 'line':
+    			case 'ib-line':
     			$this->render_line();
     			break;
 
